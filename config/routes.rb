@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
+
+  devise_scope :user {
+    get '/users/:id', to: "registrations#show", as: "user"
+   }
+
   root to: "home#index"
 
   resources :pets
