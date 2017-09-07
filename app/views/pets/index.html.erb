@@ -1,0 +1,14 @@
+#Cats
+
+
+<% @pets.each do |pet| %>
+
+  <p><%= pet.name %></p>
+  <p><%= pet.description %></p>
+  <p><%= pet.city %> <%= pet.state %></p>
+  <p><%= pet.price %></p>
+  <p><%= image_tag pet.avatar.url(:medium) %></p>
+  <p><%= link_to 'Show', pet %>
+    <%= link_to 'Edit', edit_pet_path(pet) %>
+    <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
