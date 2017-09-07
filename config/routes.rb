@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :pets
+  
+  # route to new reservation form
+  get '/pets/:id/reserve/new', to: 'reservations#new'
+
+  # route to reservation form submit
+  post '/pets/:id/reserve/', to: 'reservations#create'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
