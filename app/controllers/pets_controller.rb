@@ -18,27 +18,22 @@ class PetsController < ApplicationController
   def create
     @pet = current_user.pets.new(pet_params)
 
-    respond_to do |format|
-
-      if @pet.save
-        format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
-        format.json { render :show, status: :created, location: @pet }
-      else
-        format.html { render :new }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
+    if @pet.save
+      flash[:notice] = "Pet was successfully created."
+      redirect_to @pet
+    else
+      flash[:danger] = @pet.errors
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @pet.update(pet_params)
-        format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pet }
-      else
-        format.html { render :edit }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
+    if @pet.update(pet_params)
+      flash[:notice] = "Pet was successfully updated."
+      redirect_to @pet
+    else
+      flash[:danger] = @pet.errors
+      render :edit
     end
   end
 
