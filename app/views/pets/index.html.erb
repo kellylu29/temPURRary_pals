@@ -1,15 +1,21 @@
-#Cats
-
 
 <% @pets.each do |pet| %>
 
-  <h2><%= pet.name %></h2>
-  <p><%= image_tag pet.avatar.url(:medium) %></p>
-  <p><strong>Description:</strong> <%= pet.description %></p>
-  <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
-  <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
+<div class="main_view" style='background-image: url("<%= pet.avatar.url %>"); background-repeat: no-repeat; background-size: cover'>
+  <!-- <div class="container"> -->
+    <div class="overlay">
+      <div class="text">
+        <h2><%= pet.name %></h2>
 
-  <p><%= link_to 'Show', pet %>
-    <%= link_to 'Edit', edit_pet_path(pet) %>
-    <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><strong>Description:</strong> <%= pet.description %></p>
+        <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
+        <p><strong>Price (per hour):</strong> <%= pet.price %></p>
+
+        <p><%= link_to 'Show', pet %>
+          <%= link_to 'Edit', edit_pet_path(pet) %>
+          <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
 <% end %>
