@@ -19,7 +19,6 @@ class ReservationsController < ApplicationController
     @pet = Pet.find(params[:id])
     @reservation = @pet.reservations.build(reservation_params)
     @reservation.user = current_user
-  
     if @reservation.save
       flash[:notice] = "Reservation completed."
       redirect_to @reservation

@@ -7,7 +7,7 @@
   <p><%= image_tag pet.avatar.url(:medium) %></p>
   <p><strong>Description:</strong> <%= pet.description %></p>
   <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
-  <p><strong>Price (per hour):</strong> <%= pet.price %></p>
+  <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
   <p><%= link_to 'Show', pet %>
     <%= link_to 'Edit', edit_pet_path(pet) %>
