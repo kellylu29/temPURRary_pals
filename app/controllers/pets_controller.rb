@@ -2,10 +2,11 @@ class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pets = current_user.pets.all
+    @pets = Pet.all
   end
 
   def show
+    @user = User.find_by_id(params[:id])
   end
 
   def new
@@ -40,7 +41,7 @@ class PetsController < ApplicationController
   def destroy
     @pet.destroy
     respond_to do |format|
-      format.html { redirect_to pets, notice: 'Pet was successfully destroyed.' }
+      format.html { redirect_to pets_path, notice: 'Pet was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
