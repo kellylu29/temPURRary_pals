@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170907203910) do
     t.integer "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "borrower_id"
     t.integer "pet_id"
     t.integer "user_id"
   end
