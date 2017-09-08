@@ -1,6 +1,7 @@
 #Show cat
 
 <h2><%= @pet.name %></h2>
+<h3>Owned By: <a href="../users/<%= @pet.user_id %>"><%= @pet.user.first_name %> <%= @pet.user.last_name %></a></h3>
 <p><%= image_tag @pet.avatar.url(:medium) %></p>
 
 <p><strong>Description:</strong> <%= @pet.description %></p>

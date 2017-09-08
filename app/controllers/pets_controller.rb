@@ -2,10 +2,11 @@ class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pets = current_user.pets.all
+    @pets = Pet.all
   end
 
   def show
+    @user = User.find_by_id(params[:id])
   end
 
   def new
