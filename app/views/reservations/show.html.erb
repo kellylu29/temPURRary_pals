@@ -1,1 +1,10 @@
+#ShowReservation
 
+
+<p><strong>Reservation Date:</strong> <%= @reservation.month %> <%= @reservation.day %>, <%= @reservation.year %></p>
+
+<p><strong>Cat:</strong></p>
+<p><%= image_tag @reservation.pet.avatar.url(:medium) %></p>
+<p><strong>Name:</strong> <%= @reservation.pet.name %></p>
+<p><strong>Description:</strong> <%= @reservation.pet.description %></p>
+<p><strong>Location:</strong> <%= @reservation.pet.city %>, <%= @reservation.pet.state %></p>

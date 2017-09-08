@@ -1,3 +1,9 @@
 #Show cat
 
+<h2><%= @pet.name %></h2>
 <p><%= image_tag @pet.avatar.url(:medium) %></p>
+
+<p><strong>Description:</strong> <%= @pet.description %></p>
+<p><strong>Location:</strong> <%= @pet.city %>, <%= @pet.state %></p>
+
+<p><%= link_to 'Reserve', new_reservation_path %></p>
