@@ -14,9 +14,11 @@
 
     <div class="topnav">
       <ul>
+        <li><%= link_to "TemPURRary Pals", root_path %></li>
         <% if current_user %>
         <li><%= link_to "My Profile", current_user %></li>
         <li><%= link_to "View Cats", pets_path %></li>
+        <li><%= link_to "Lend a Cat", new_pet_path %></li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
