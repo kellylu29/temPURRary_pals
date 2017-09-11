@@ -1,16 +1,14 @@
 
 <% @pets.each do |pet| %>
 
-<div class="main_view" style='background-image: url("<%= pet.avatar.url %>"); background-repeat: no-repeat; background-size: cover'>
-  <!-- <div class="container"> -->
-    <div class="overlay">
-      <div class="text">
-        <h2><%= pet.name %></h2>
+<div class="main_view">
 
+        <h2><%= pet.name %></h2>
+        <p><%= image_tag pet.avatar.url(:medium) %></p>
         <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
         <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
-        <p><%= link_to 'Show', pet %>
+        <p><%= link_to 'Show', pet, :class => 'link' %>
 
       </div>
     </div>
