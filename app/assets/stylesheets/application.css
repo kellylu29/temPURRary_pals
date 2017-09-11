@@ -14,8 +14,6 @@
  *= require_self
  */
 
-
-
  html {
    background-color: #FF0088;
  }
@@ -81,16 +79,13 @@
    color: white;
 
 }
-
-
+/*
  img{
    max-width: 75%;
    max-height: 75%;
    border: 2px solid black;
    border-radius: 50%;
-
-
- }
+ }*/
 
  /*.container {
   position: relative;
@@ -103,7 +98,7 @@
   height: auto;
 }*/
 
-.overlay {
+/*.overlay {
   position: absolute;
   opacity: 0;
   transition: .5s ease;
@@ -124,9 +119,9 @@
 
 .main_view:hover .overlay {
   opacity: 1;
-}
+}*/
 
-.text {
+/*.text {
   color: white;
   font-size: 16px;
   position: absolute;
@@ -134,4 +129,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
+}*/
