@@ -18,7 +18,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def set_pet_reservation
-    @reservations = Reservation.all
+    @reservations = current_user.reservations
   end
 
   def sign_up_params

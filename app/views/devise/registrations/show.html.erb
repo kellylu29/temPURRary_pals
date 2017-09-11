@@ -1,6 +1,7 @@
 <h2><%= @user.first_name %> <%= @user.last_name %></h2>
 <p><strong>Email:</strong> <%= @user.email %></p>
 <p><%= image_tag @user.avatar.url(:medium) %></p>
+<p> <%= link_to 'Edit', edit_user_registration_path(@user) %></p>
 
 <h2> My Cats </h2>
 
