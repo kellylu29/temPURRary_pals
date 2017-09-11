@@ -1,11 +1,10 @@
-# README
+# TemPURRary Pals
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Borrow cats from lenders!
 
-Things you may want to cover:
+Technology Used:
 
-* Ruby version
+* Ruby on Rails
 
 * System dependencies
 
