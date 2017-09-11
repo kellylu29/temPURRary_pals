@@ -13,6 +13,7 @@ class ReservationsController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -29,11 +30,19 @@ class ReservationsController < ApplicationController
   end
 
   def update
-
+    if @reservation.update(reservation_params)
+      flash[:notice] = "Reservation was successfully updated."
+      redirect_to @reservation
+    else
+      flash[:notice] = "Reservation was not successfully updated."
+      render :edit
+    end
   end
 
   def destroy
+    @user = current_user
     @reservation.destroy
+    redirect_to current_user
   end
 
   private
