@@ -43,6 +43,7 @@ textarea {
   cursor: pointer;
   color: black;
   width: 50%;
+  font-style: italic;
 }
 
 .submit_button {
@@ -74,6 +75,14 @@ textarea {
 
 .cancel_button {
   width: 40%;
+  background-color: transparent;
+  border: 3px solid black;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+
+  &:hover{
+    color: #fdd0e8;
+  }
 }
 
 i {

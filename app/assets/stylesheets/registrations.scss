@@ -8,46 +8,43 @@
 }
 
 .user_page h2 {
-  color: #fdd0e8;
+  color: #000;
   height: 30px;
 }
 
 .user_info {
+  box-sizing: border-box;
   text-align: center;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
-  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fdd0e8;
+  border-radius: 30%;
+  border: 3px solid black;
+  margin: 0 auto;
 }
 
-.user_pets, .user_reservations {
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 90%;
-  height: inherit;
+.user_block {
+  width: 75%;
   margin: 0 auto;
+
 }
 
 .user_pet {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 400px;
-  height: 400px;
-  margin: 10px;
-  padding: 1.5%;
-  background-color: #fdd0e8;
-}
-
-.user_res {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 400px;
-  height: 400px;
-  margin: 10px;
-  padding: 1.5%;
-  background-color: #fdd0e8;
+  border: 3px solid black;
+  border-radius: 50%;
+  width: 245px;
+  height: 445px;
+  padding: 25px;
+  margin: 0 auto;
+  margin-left: 35px;
+  margin-bottom: 40px;
+  display: inline-table;
+  text-align: center;
+  background: #fdd0e8;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 17px;
+  color: black;
 }
 
 .prof_img {
