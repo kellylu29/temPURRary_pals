@@ -4,7 +4,9 @@
 
     <h3>Owned By: <a class='link' href="../users/<%= @pet.user_id %>"><%= @pet.user.first_name %> <%= @pet.user.last_name %></a></h3>
 
-    <p><%= image_tag @pet.avatar.url(:medium), :class => 'cat_img' %></p>
+    <div class="cat_img" style='background-image: url("<%= @pet.avatar.url %>")'>
+
+    </div>
 
     <p><strong>Description:</strong><br>
       <%= @pet.description %></p>
@@ -12,6 +14,17 @@
       <%= @pet.city %>, <%= @pet.state %></p>
     <p><strong>Price (per hour):</strong><br>
       $<%= @pet.price %></p>
+
+    <p><strong>Upcoming Reservations</strong>:<br>
+
+      <% @reservations.each do |reservation| %>
+        <% if reservation.date.strftime("%m / %d / %Y") > Date.today.strftime("%m / %d / %Y") %>
+          <p><%= reservation.date.strftime("%m / %d / %Y") %></p>
+        <% else %>
+          <p>None</p>
+        <% end %>
+      <% end %>
+    </p>
 
     <% if @pet.user === current_user %>
       <%= link_to 'Edit', edit_pet_path(@pet), :class => 'link' %> |

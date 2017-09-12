@@ -3,10 +3,12 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+
   end
 
   def show
     @user = User.find_by_id(params[:id])
+    @reservations = @pet.reservations
   end
 
   def new
@@ -52,6 +54,6 @@ class PetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
-      params.require(:pet).permit(:name, :description, :city, :state, :price, :avatar, :user_id)
+      params.require(:pet).permit(:name, :description, :city, :state, :price, :avatar, :user_id, :reservation_id, :reservation_date)
     end
 end
