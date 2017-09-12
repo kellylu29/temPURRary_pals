@@ -1,3 +1,16 @@
 // Place all the styles related to the Reservations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.reservation_page {
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.res_container {
+  box-sizing: border-box;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fdd0e8;
+}

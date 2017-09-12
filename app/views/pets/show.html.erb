@@ -1,5 +1,3 @@
-#Show cat
-
 <h2><%= @pet.name %></h2>
 
 <h3>Owned By: <a href="../users/<%= @pet.user_id %>"><%= @pet.user.first_name %> <%= @pet.user.last_name %></a></h3>
@@ -12,7 +10,7 @@
 
 <% if @pet.user === current_user %>
   <%= link_to 'Edit', edit_pet_path(@pet) %>
-  <%= link_to 'Destroy', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Delete', @pet, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% else %>
   <p><%= link_to 'Reserve', new_reservation_path %></p>
 <% end %></p>

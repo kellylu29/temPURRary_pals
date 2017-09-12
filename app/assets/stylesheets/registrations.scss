@@ -1,3 +1,52 @@
 // Place all the styles related to the Registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_page {
+  font-family: sans-serif;
+  width: 100%;
+  height: inherit;
+}
+
+.user_page h2 {
+  text-align: center;
+  color: #fdd0e8;
+  height: 30px;
+}
+
+.user_info {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.user_pets, .user_reservations {
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: inherit;
+  margin: 0 auto;
+}
+
+.user_pet {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 1.5%;
+  background-color: #fdd0e8;
+}
+
+.user_res {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 1.5%;
+  background-color: #fdd0e8;
+}
