@@ -1,34 +1,50 @@
-<h2><%= @user.first_name %> <%= @user.last_name %></h2>
-<p><strong>Email:</strong> <%= @user.email %></p>
-<p><%= image_tag @user.avatar.url(:medium) %></p>
-<p> <%= link_to 'Edit', edit_user_registration_path(@user) %></p>
+<div class="user_page">
 
-<h2> My Cats </h2>
+  <div class="user_info">
+    <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+    <p><%= image_tag @user.avatar.url(:medium) %></p>
+    <p><strong>Email:</strong> <%= @user.email %></p>
+    <p> <%= link_to 'Edit', edit_user_registration_path(@user) %></p>
+  </div>
 
-<% @pets.each do |pet| %>
-  <p><strong> Name: </strong><%= pet.name %></p>
-  <p><%= image_tag pet.avatar.url(:medium) %></p>
-  <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
-  <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
+  <h2> My Cats </h2>
+  <div class="user_pets">
 
-  <%= link_to 'Show', pet_path %>
-  <%= link_to 'Edit', edit_pet_path(pet) %>
-  <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+    <% @pets.each do |pet| %>
+      <div class="user_pet">
+        <p><strong> Name: </strong><%= pet.name %></p>
+        <p><%= image_tag pet.avatar.url(:medium) %></p>
+        <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
+        <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
-<h2> My Reservations </h2>
+        <%= link_to 'Show', pet_path %>
+        <%= link_to 'Edit', edit_pet_path(pet) %>
+        <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
 
-<% @reservations.each do |reservation| %>
-  <p><strong> Reservation Date: </strong><%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
+    <% end %>
+  </div>
 
-  <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
-  <p> <%= image_tag reservation.pet.avatar.url(:medium) %> </p>
-  <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
-  <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
+  <h2> Upcoming Reservations </h2>
+  <div class="user_reservations">
 
-  <p><%= link_to 'Show', reservation_path(reservation) %>
-    <%= link_to 'Edit', edit_reservation_path(reservation) %>
-  </p>
-  <hr>
 
-<% end %>
+    <% @reservations.each do |reservation| %>
+
+      <div class="user_res">
+        <p><strong> Reservation Date: </strong><%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
+
+        <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
+        <p> <%= image_tag reservation.pet.avatar.url(:medium) %> </p>
+        <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
+        <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
+
+        <p><%= link_to 'Show', reservation_path(reservation) %>
+          <%= link_to 'Edit', edit_reservation_path(reservation) %>
+        </p>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>

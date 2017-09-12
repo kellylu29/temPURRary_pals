@@ -1,17 +1,10 @@
-
 <% @pets.each do |pet| %>
+  <div class="main_view">
+    <h2><%= pet.name %></h2>
+    <p><%= image_tag pet.avatar.url(:medium) %></p>
+    <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
+    <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
-<div class="main_view">
-
-        <h2><%= pet.name %></h2>
-        <p><%= image_tag pet.avatar.url(:medium) %></p>
-        <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
-        <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
-
-        <p><%= link_to 'Show', pet, :class => 'link' %>
-
-      </div>
-    </div>
-    <!-- </div> -->
+    <p><%= link_to 'Show', pet, :class => 'link' %>
   </div>
 <% end %>

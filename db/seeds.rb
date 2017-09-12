@@ -20,12 +20,12 @@ Pet.create!(user_id: 1, name: "Furball", description: "Chill and relaxed kitty. 
 
 Pet.create!(user_id: 2, name: "Snowball", description: "Playful cat. Will do anything for treats. Loves hugs.", city: "Cherry Hill", state: "NJ", price: 36, avatar: File.new("#{Rails.root}/public/images/cat4.jpg"))
 
-Pet.create!(user_id: 2, name: "Bob", description: "Friendly with humans, but not other animals. Likes play time, naps, and catnip. ", city: "Fort Lee", state: "NJ", price: 36, avatar: File.new("#{Rails.root}/public/images/cat5.jpg"))
+Pet.create!(user_id: 2, name: "Bob", description: "Friendly with humans, but not other animals. Likes play time, naps, and catnip. ", city: "Fort Lee", state: "NJ", price: 29, avatar: File.new("#{Rails.root}/public/images/cat5.jpg"))
 
-Pet.create!(user_id: 2, name: "Mr. Cat", description: "Good with dogs and other animals. Mostly calm and relaxed. A little fat, but working on it.", city: "New York", state: "NY", price: 36, avatar: File.new("#{Rails.root}/public/images/cat6.jpg"))
+Pet.create!(user_id: 2, name: "Mr. Cat", description: "Good with dogs and other animals. Mostly calm and relaxed. A little fat, but working on it.", city: "New York", state: "NY", price: 32, avatar: File.new("#{Rails.root}/public/images/cat6.jpg"))
 
-Pet.create!(user_id: 3, name: "Frankie", description: "Likes the outdoors and exploring. Very loving and friendly.", city: "Wilmington", state: "DE", price: 36, avatar: File.new("#{Rails.root}/public/images/cat7.jpg"))
+Pet.create!(user_id: 3, name: "Frankie", description: "Likes the outdoors and exploring. Very loving and friendly.", city: "Wilmington", state: "DE", price: 45, avatar: File.new("#{Rails.root}/public/images/cat7.jpg"))
 
-Pet.create!(user_id: 3, name: "Bart", description: "Easily bored. Needs a lot of attention and play time. Will do tricks for treats.", city: "Baltimore", state: "MD", price: 36, avatar: File.new("#{Rails.root}/public/images/cat8.jpg"))
+Pet.create!(user_id: 3, name: "Bart", description: "Easily bored. Needs a lot of attention and play time. Will do tricks for treats.", city: "Baltimore", state: "MD", price: 49, avatar: File.new("#{Rails.root}/public/images/cat8.jpg"))
 
-Pet.create!(user_id: 3, name: "Coco", description: "Loves people. Very curious and likes to explore.", city: "Philadelphia", state: "PA", price: 36, avatar: File.new("#{Rails.root}/public/images/cat9.jpg"))
+Pet.create!(user_id: 3, name: "Coco", description: "Loves people. Very curious and likes to explore.", city: "Philadelphia", state: "PA", price: 30, avatar: File.new("#{Rails.root}/public/images/cat9.jpg"))
