@@ -1,10 +1,19 @@
-#ShowReservation
+<div class="reservation_page">
+  <div class="res_container">
+    <p><strong>Reservation Date:</strong><br>
+      <%= @reservation.month %> <%= @reservation.day %>, <%= @reservation.year %></p>
 
+    <p><strong>Cat:</strong></p>
+    <p><%= image_tag @reservation.pet.avatar.url(:medium) %></p>
+    <p><strong>Name:</strong><br>
+      <%= @reservation.pet.name %></p>
+    <p><strong>Description:</strong><br>
+      <%= @reservation.pet.description %></p>
+    <p><strong>Location:</strong><br>
+      <%= @reservation.pet.city %>, <%= @reservation.pet.state %></p>
+    <p><%= link_to 'Edit', edit_reservation_path(@reservation) %>
+      <%= link_to 'Delete', @reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
 
-<p><strong>Reservation Date:</strong> <%= @reservation.month %> <%= @reservation.day %>, <%= @reservation.year %></p>
-
-<p><strong>Cat:</strong></p>
-<p><%= image_tag @reservation.pet.avatar.url(:medium) %></p>
-<p><strong>Name:</strong> <%= @reservation.pet.name %></p>
-<p><strong>Description:</strong> <%= @reservation.pet.description %></p>
-<p><strong>Location:</strong> <%= @reservation.pet.city %>, <%= @reservation.pet.state %></p>
+</div>

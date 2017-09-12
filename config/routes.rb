@@ -18,7 +18,15 @@ Rails.application.routes.draw do
   # route to reservation form submit
   post '/pets/:id/reserve/', to: 'reservations#create'
 
+  # route to edit reservation form
+  get '/pets/reserve/:id/edit', to: 'reservations#edit', as: "edit_reservation"
+
+  # route to edit reservation form submit
+  patch '/pets/reserve/:id', to: 'reservations#update'
+
   get '/pets/reserve/:id', to: 'reservations#show', as: "reservation"
+
+  delete '/pets/reserve/:id', to: 'reservations#destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -40,10 +40,8 @@ class PetsController < ApplicationController
 
   def destroy
     @pet.destroy
-    respond_to do |format|
-      format.html { redirect_to pets_path, notice: 'Pet was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:notice] = "Pet was successfully updated."
+    redirect_to pets_path
   end
 
   private
