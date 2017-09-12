@@ -2,7 +2,9 @@
 
   <div class="user_info">
     <h2><%= @user.first_name %> <%= @user.last_name %></h2>
-    <p><%= image_tag @user.avatar.url(:medium) %></p>
+    <div class="prof_img" style='background-image: url("<%= @user.avatar.url %>")'>
+
+    </div>
     <p><strong>Email:</strong> <%= @user.email %></p>
     <p> <%= link_to 'Edit', edit_user_registration_path(@user) %></p>
   </div>
@@ -13,7 +15,9 @@
     <% @pets.each do |pet| %>
       <div class="main_view">
         <p><strong> Name: </strong><%= pet.name %></p>
-        <p><%= image_tag pet.avatar.url(:medium), :class => 'cat_img' %></p>
+        <div class="cat_img" style='background-image: url("<%= pet.avatar.url %>")'>
+
+        </div>
         <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
         <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
@@ -35,7 +39,10 @@
         <p><strong> Reservation Date: </strong><%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
 
         <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
-        <p> <%= image_tag reservation.pet.avatar.url(:medium), :class => 'cat_img' %> </p>
+        <div class="cat_img" style='background-image: url("<%= pet.avatar.url %>")'>
+
+        </div>
+
         <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
         <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
 
