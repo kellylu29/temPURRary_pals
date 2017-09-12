@@ -1,0 +1,81 @@
+.form_head {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #fdd0e8;
+  font-size: 1.5em;
+}
+
+.form {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #fdd0e8;
+  border: 3px solid black;
+  width: 30%;
+  padding: 10px;
+  margin: 0 auto;
+  line-height: 250%;
+}
+
+input, textarea, select {
+  width: 90%;
+  height: 2em;
+  font-size: 1em;
+}
+
+textarea {
+  height: 4em;
+}
+
+#user_remember_me {
+  width: 5%;
+  height: 15px;
+}
+
+.remember_me_label {
+  text-align: left;
+  font-family: sans-serif;
+  color: black;
+  font-size: 1em;
+  width: 50%;
+}
+
+.img_button {
+  cursor: pointer;
+  color: black;
+  width: 50%;
+}
+
+.submit_button {
+  cursor: pointer;
+  background-color: transparent;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  border: none;
+  color: black;
+
+  &:hover {
+    color: #fdd0e8;
+  }
+}
+
+.shared_links:hover {
+  color: #fdd0e8;
+}
+
+.cancel {
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: #fdd0e8;
+  width: 30%;
+  padding: 10px;
+  margin: 0 auto;
+  line-height: 250%;
+}
+
+.cancel_button {
+  width: 40%;
+}
+
+i {
+  font-size: .75em;
+}
