@@ -8,12 +8,12 @@
   </div>
 
   <h2> My Cats </h2>
-  <div class="user_pets">
+
 
     <% @pets.each do |pet| %>
-      <div class="user_pet">
+      <div class="main_view">
         <p><strong> Name: </strong><%= pet.name %></p>
-        <p><%= image_tag pet.avatar.url(:medium) %></p>
+        <p><%= image_tag pet.avatar.url(:medium), :class => 'cat_img' %></p>
         <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
         <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
@@ -23,7 +23,7 @@
       </div>
 
     <% end %>
-  </div>
+
 
   <h2> Upcoming Reservations </h2>
   <div class="user_reservations">
@@ -35,7 +35,7 @@
         <p><strong> Reservation Date: </strong><%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
 
         <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
-        <p> <%= image_tag reservation.pet.avatar.url(:medium) %> </p>
+        <p> <%= image_tag reservation.pet.avatar.url(:medium), :class => 'cat_img' %> </p>
         <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
         <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
 
