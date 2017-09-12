@@ -6,48 +6,53 @@
 
     </div>
     <p><strong>Email:</strong> <%= @user.email %></p>
-    <p> <%= link_to 'Edit', edit_user_registration_path(@user) %></p>
+    <p> <%= link_to 'Edit', edit_user_registration_path(@user), :class => 'link' %></p>
   </div>
 
-  <h2> My Cats </h2>
+  <h2 class="form_head"> My Cats </h2>
+  <div class="user_block">
 
-    <% @pets.each do |pet| %>
-      <div class="main_view">
-        <p><strong> Name: </strong><%= pet.name %></p>
-        <div class="cat_img" style='background-image: url("<%= pet.avatar.url %>")'>
+      <% @pets.each do |pet| %>
+        <div class="user_pet">
+          <p><strong> Name: </strong><%= pet.name %></p>
+          <div class="cat_img" style='background-image: url("<%= pet.avatar.url %>")'>
+
+          </div>
+
+          <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
+          <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
+
+          <div class="">
+
+          </div>
+          <%= link_to 'Show', pet_path(pet), :class => 'link' %>
+        </div>
+
+      <% end %>
+  </div>
+
+  <h2 class="form_head"> Upcoming Reservations </h2>
+  <div class="user_block">
+
+    <% @reservations.each do |reservation| %>
+
+      <div class="user_pet">
+        <p><strong> Reservation Date: </strong><br>
+          <%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
+
+        <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
+        <div class="cat_img" style='background-image: url("<%= reservation.pet.avatar.url %>")'>
 
         </div>
 
-        <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
-        <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
+        <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
+        <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
 
-        <div class="">
-
-        </div>
-        <%= link_to 'Show', pet_path(pet), :class => 'link' %>
+        <%= link_to 'Show', reservation_path(reservation), :class => 'link' %>
       </div>
 
     <% end %>
 
-  <h2> Upcoming Reservations </h2>
-
-  <% @reservations.each do |reservation| %>
-
-    <div class="main_view">
-      <p><strong> Reservation Date: </strong><br>
-        <%= reservation.month %> <%= reservation.day %>, <%= reservation.year %></p>
-
-      <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
-      <div class="cat_img" style='background-image: url("<%= reservation.pet.avatar.url %>")'>
-
-      </div>
-
-      <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
-      <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
-
-      <%= link_to 'Show', reservation_path(reservation), :class => 'link' %>
-    </div>
-
-  <% end %>
+  </div>
 
 </div>
