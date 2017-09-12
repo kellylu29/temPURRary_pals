@@ -28,12 +28,9 @@ ActiveRecord::Schema.define(version: 20170907203910) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.string "month"
-    t.integer "day"
-    t.integer "year"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "borrower_id"
     t.integer "pet_id"
     t.integer "user_id"
   end

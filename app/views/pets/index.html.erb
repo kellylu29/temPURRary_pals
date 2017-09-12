@@ -1,10 +1,15 @@
+
+
+
 <% @pets.each do |pet| %>
   <div class="main_view">
+
+
     <h2><%= pet.name %></h2>
     <div class="cat_img" style='background-image: url("<%= pet.avatar.url %>")'>
 
     </div>
-    <!-- <p><%= image_tag pet.avatar.url(:medium), :class => 'cat_img' %></p> -->
+
     <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
     <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 

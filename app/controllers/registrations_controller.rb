@@ -14,11 +14,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def set_pet
-    @pets = current_user.pets
+    user = User.find(params[:id])
+    @pets = user.pets
   end
 
   def set_pet_reservation
-    @reservations = current_user.reservations
+    user = User.find(params[:id])
+    @reservations = user.reservations
   end
 
   def sign_up_params

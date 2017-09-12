@@ -1,7 +1,8 @@
 <div class="reservation_page">
   <div class="res_container">
     <p><strong>Reservation Date:</strong><br>
-      <%= @reservation.month %> <%= @reservation.day %>, <%= @reservation.year %></p>
+      <%= @reservation.date.strftime("%m / %d / %Y") %>
+    </p>
 
     <p><strong>Cat:</strong></p>
     <p><%= image_tag @reservation.pet.avatar.url(:medium), :class => 'cat_img' %></p>
