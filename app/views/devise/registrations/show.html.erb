@@ -21,9 +21,10 @@
         <p><strong>Location:</strong> <%= pet.city %>, <%= pet.state %></p>
         <p><strong>Price (per hour):</strong> $<%= pet.price %></p>
 
-        <%= link_to 'Show', pet_path %>
-        <%= link_to 'Edit', edit_pet_path(pet) %>
-        <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="">
+
+        </div>
+        <%= link_to 'Show', pet_path(pet), :class => 'link' %>
       </div>
 
     <% end %>
@@ -44,9 +45,7 @@
       <p><strong>Location:</strong> <%= reservation.pet.city %>, <%= reservation.pet.state %> </p>
       <p><strong>Price (Per Hour):</strong> $<%= reservation.pet.price %> </p>
 
-      <p><%= link_to 'Show', reservation_path(reservation) %>
-        <%= link_to 'Edit', edit_reservation_path(reservation) %>
-      </p>
+      <%= link_to 'Show', reservation_path(reservation), :class => 'link' %>
     </div>
 
   <% end %>
