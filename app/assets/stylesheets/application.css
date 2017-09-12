@@ -27,6 +27,7 @@
 
  ul {
    list-style: none;
+   padding-left: 0;
  }
 
  li {
@@ -43,9 +44,12 @@
    color: #fdd0e8;
  }
 
- .link:hover {
+ .link {
    color: #ff0082;
+ }
 
+ .link:hover {
+   color: black;
  }
 
  .header {
@@ -65,7 +69,6 @@
    width: 150px;
    padding: 25px;
    margin: 0 auto;
-
  }
 
  .main_view {
@@ -80,14 +83,13 @@
    display: inline-table;
    text-align: center;
    background: #fdd0e8;
-   font-family: 'Knewave', cursive;
+   font-family: 'Permanent Marker', cursive;
    font-size: 17px;
    color: black;
-
-}
+ }
 
  img {
-   margin:  0 auto;
+   margin: 0 auto;
    border: 2px solid black;
    border-radius: 50%;
    max-width: 200px;
