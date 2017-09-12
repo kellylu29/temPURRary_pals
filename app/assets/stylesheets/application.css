@@ -93,6 +93,8 @@
  /*SLIDE SHOW CSS*/
 
  .tech-slideshow {
+  border: 5px solid black;
+  border-radius: 30%;
   height: 325px;
   max-width: 1000px;
   margin: 0 auto;
@@ -114,13 +116,13 @@
   transform: translate3d(0, 0, 0);
 }
 .tech-slideshow .mover-1 {
-  animation: moveSlideshow 12s linear infinite;
+  animation: moveSlideshow 20s linear infinite;
 }
 .tech-slideshow .mover-2 {
   opacity: 0;
   transition: opacity 0.5s ease-out;
   background-position: 0 -200px;
-  animation: moveSlideshow 15s linear infinite;
+  animation: moveSlideshow 10s linear infinite;
 }
 .tech-slideshow:hover .mover-2 {
   opacity: 1;
