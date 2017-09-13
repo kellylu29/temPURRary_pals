@@ -29,3 +29,40 @@ Pet.create!(user_id: 3, name: "Frankie", description: "Likes the outdoors and ex
 Pet.create!(user_id: 3, name: "Bart", description: "Easily bored. Needs a lot of attention and play time. Will do tricks for treats.", city: "Baltimore", state: "MD", price: 49, avatar: File.new("#{Rails.root}/public/images/cat8.jpg"))
 
 Pet.create!(user_id: 3, name: "Coco", description: "Loves people. Very curious and likes to explore.", city: "Philadelphia", state: "PA", price: 30, avatar: File.new("#{Rails.root}/public/images/cat9.jpg"))
+
+
+Reservation.create!(user_id: 1, pet_id: 4 , date: "2017-09-20")
+
+Reservation.create!(user_id: 1, pet_id: 5 , date: "2017-09-21")
+
+Reservation.create!(user_id: 1, pet_id: 6 , date: "2017-09-22")
+
+Reservation.create!(user_id: 1, pet_id: 7 , date: "2017-09-09")
+
+Reservation.create!(user_id: 1, pet_id: 8 , date: "2017-09-10")
+
+Reservation.create!(user_id: 1, pet_id: 9 , date: "2017-09-11")
+
+Reservation.create!(user_id: 2, pet_id: 9 , date: "2017-09-20")
+
+Reservation.create!(user_id: 2, pet_id: 8 , date: "2017-09-21")
+
+Reservation.create!(user_id: 2, pet_id: 7 , date: "2017-09-22")
+
+Reservation.create!(user_id: 2, pet_id: 3 , date: "2017-09-10")
+
+Reservation.create!(user_id: 2, pet_id: 2 , date: "2017-09-11")
+
+Reservation.create!(user_id: 2, pet_id: 1 , date: "2017-09-12")
+
+Reservation.create!(user_id: 3, pet_id: 1 , date: "2017-09-20")
+
+Reservation.create!(user_id: 3, pet_id: 2 , date: "2017-09-21")
+
+Reservation.create!(user_id: 3, pet_id: 3 , date: "2017-09-22")
+
+Reservation.create!(user_id: 3, pet_id: 4 , date: "2017-09-09")
+
+Reservation.create!(user_id: 3, pet_id: 5 , date: "2017-09-10")
+
+Reservation.create!(user_id: 3, pet_id: 6 , date: "2017-09-11")
