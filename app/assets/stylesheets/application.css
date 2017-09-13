@@ -18,6 +18,14 @@
    background-color: #FF0088;
  }
 
+.notice, .alert {
+  font-family: sans-serif;
+  text-align: center;
+  top: 0;
+  bottom: 5px;
+  font-style: italic;
+}
+
  ul, li {
    font-family: 'Shrikhand', cursive;
    /*font-family: 'Permanent Marker', cursive;*/
@@ -28,6 +36,7 @@
  ul {
    list-style: none;
    padding-left: 0;
+   margin-bottom: 5px;
  }
 
  li {

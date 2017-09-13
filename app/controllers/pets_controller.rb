@@ -8,7 +8,7 @@ class PetsController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
-    @reservations = @pet.reservations
+    @reservations = @pet.reservations.sort_by &:date
   end
 
   def new

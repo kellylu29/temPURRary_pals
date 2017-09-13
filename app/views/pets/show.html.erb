@@ -15,16 +15,11 @@
     <p><strong>Price (per hour):</strong><br>
       $<%= @pet.price %></p>
 
-    <p><strong>Upcoming Reservations</strong>:<br>
-
-      <% @reservations.each do |reservation| %>
-        <% if reservation.date.strftime("%m / %d / %Y") > Date.today.strftime("%m / %d / %Y") %>
-          <p><%= reservation.date.strftime("%m / %d / %Y") %></p>
-        <% else %>
-          <p>None</p>
-        <% end %>
+    <% @reservations.each do |reservation| %>
+      <% if reservation.date.strftime("%m / %d / %Y") > Date.today.strftime("%m / %d / %Y") %>
+        <p>Unavailable: <%= reservation.date.strftime("%m / %d / %Y") %></p>
       <% end %>
-    </p>
+    <% end %>
 
     <% if @pet.user === current_user %>
       <%= link_to 'Edit', edit_pet_path(@pet), :class => 'link' %> |
