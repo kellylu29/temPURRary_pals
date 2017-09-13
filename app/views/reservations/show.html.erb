@@ -5,7 +5,8 @@
     </p>
 
     <p><strong>Cat:</strong></p>
-    <p><%= image_tag @reservation.pet.avatar.url(:medium), :class => 'cat_img' %></p>
+    <div class="cat_img" style='background-image: url("<%= @reservation.pet.avatar.url %>")'>
+    </div>
     <p><strong>Name:</strong><br>
       <%= @reservation.pet.name %></p>
     <p><strong>Description:</strong><br>

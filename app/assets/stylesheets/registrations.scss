@@ -27,24 +27,29 @@
 .user_block {
   width: 75%;
   margin: 0 auto;
-
+  text-align: center;
 }
 
 .user_pet {
   border: 3px solid black;
   border-radius: 50%;
-  width: 245px;
-  height: 445px;
-  padding: 25px;
+  box-sizing: border-box;
+  width: 300px;
+  height: 500px;
+  padding: 50px 25px 0px 25px;
   margin: 0 auto;
   margin-left: 35px;
   margin-bottom: 40px;
-  display: inline-table;
+  display: inline-block;
   text-align: center;
   background: #fdd0e8;
   font-family: 'Permanent Marker', cursive;
   font-size: 17px;
   color: black;
+}
+
+.user_res {
+  padding-top: 35px;
 }
 
 .prof_img {
