@@ -33,7 +33,7 @@
 
     <% @reservations.each do |reservation| %>
       <% if reservation.date.strftime("%m / %d / %Y") > Date.today.strftime("%m / %d / %Y") %>
-        <div class="user_pet">
+        <div class="user_pet user_res">
           <p><strong> Reservation Date: </strong><br>
             <%= reservation.date.strftime("%m / %d / %Y") %></p>
 
@@ -57,8 +57,8 @@
 
     <% @reservations.each do |reservation| %>
       <% if reservation.date.strftime("%m / %d / %Y") < Date.today.strftime("%m / %d / %Y") %>
-        <div class="user_pet">
-          <p><strong> Reservation Date: </strong><br>
+        <div class="user_pet user_res">
+          <p><strong> Reserved On: </strong><br>
             <%= reservation.date.strftime("%m / %d / %Y") %></p>
 
           <p><strong>Name:</strong> <%= reservation.pet.name %> </p>
