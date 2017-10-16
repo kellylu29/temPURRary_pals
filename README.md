@@ -2,11 +2,11 @@
 
 Borrow a cat on your day off and never be lonely again!
 
-http://tempurrarypals.herokuapp.com/
+View Live: http://tempurrarypals.herokuapp.com/
 
 #### Demo:
 
-* Email: harry@harry.com
+* Email: harry@ford.com
 * Password: password
 
 Technology
